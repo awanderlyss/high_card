@@ -11,14 +11,6 @@ collect = []
 #
 # The deck should be an array of cards.
 # Each card should be a mini-array with a value and suit. Example: [8, "hearts"]
-# Shuffle the deck. It would look something like this...
-# deck = [
-#     [8, "hearts"],
-#     [2, "diamonds"],
-#     ["J", "clubs"],
-#     ...
-# ]
-# NOTE: do not hardcode the deck. Create it by performing methods on the two arrays in the starter code.
 
 ranks.each do |rank|
   suits.each do |suit|
@@ -28,6 +20,17 @@ ranks.each do |rank|
   end
 end
 
+# Shuffle the deck. It would look something like this...
+# deck = [
+#     [8, "hearts"],
+#     [2, "diamonds"],
+#     ["J", "clubs"],
+#     ...
+# ]
+
+deck.shuffle
+
+# NOTE: do not hardcode the deck. Create it by performing methods on the two arrays in the starter code.
 # Collect an array of player names by prompting:
 
 # "{n} players so far. Enter a player name, or type 'play':" Should look like this: [{name:'Jesse'}, {name:'Jane'}]
