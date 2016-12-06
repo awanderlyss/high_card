@@ -3,6 +3,8 @@ ranks = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K" ]
 suits = [ "hearts", "spades", "clubs", "diamonds" ]
 
 players = []
+deck = []
+collect = []
 
 
 # Build a deck of shuffled cards.
@@ -17,8 +19,17 @@ players = []
 #     ...
 # ]
 # NOTE: do not hardcode the deck. Create it by performing methods on the two arrays in the starter code.
+
+ranks.each do |rank|
+  suits.each do |suit|
+    collect.push(rank, suit)
+      deck.push(collect)
+        collect = []
+  end
+end
+
 # Collect an array of player names by prompting:
-#
+
 # "{n} players so far. Enter a player name, or type 'play':" Should look like this: [{name:'Jesse'}, {name:'Jane'}]
 # Upon "play", deal each player a card.
 # Find the highest card score dealt (Aces high).
